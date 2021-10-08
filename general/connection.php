@@ -21,6 +21,7 @@ $pdo = new \PDO($database, $user, $pass, $options);
 // }
 
 // functia asta selecteaza toate produsele din baza de date
+// am adaugat linia asta
 function getProducts(){
     global $pdo;
     $command = "SELECT * from products";

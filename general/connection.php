@@ -20,11 +20,11 @@ $pdo = new \PDO($database, $user, $pass, $options);
 //      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 // }
 
-
+// functia asta selecteaza toate produsele din baza de date
 function getProducts(){
     global $pdo;
     $command = "SELECT * from products";
-    $statement = $pdo->query($command); //?????????????????????????????????
+    $statement = $pdo->query($command); 
     $statement ->execute();
     $result = $statement->fetchAll();
     return $result;
